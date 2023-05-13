@@ -1,7 +1,8 @@
 import axios from "axios";
-
-export default axios.create(
-    {
-        baseURL: "http://localhost:3000/api/v1/restaurants"
-    }
-);
+baseURL =
+  ENVERONMNET === "development"
+    ? "http://localhost:3000/api/v1/restaurants"
+    : "/api/v1/restaurants";
+export default axios.create({
+  baseURL,
+});
