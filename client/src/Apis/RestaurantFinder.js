@@ -1,8 +1,8 @@
 import axios from "axios";
-baseURL =
-  ENVERONMNET === "development"
-    ? "http://localhost:3000/api/v1/restaurants"
-    : "/api/v1/restaurants";
+const baseURL =
+  process.env.ENVERONMNET === "development"
+    ? "http://localhost:3000/api/v2/restaurants"
+    : "http://localhost:3000/api/v2/restaurants";
 export default axios.create({
   baseURL,
 });
